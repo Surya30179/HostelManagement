@@ -1,0 +1,18 @@
+# Frontend Dependencies
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+frontend/.swc
+
+# Backend Dependencies
+backend/.venv/
+backend/__pycache__/
+backend/instance/
+backend/.env
+backend/outing_system.db
+*.sqlite3
+
+# OS Files
+.DS_Store
+Thumbs.db
