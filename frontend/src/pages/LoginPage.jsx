@@ -45,7 +45,6 @@ export default function LoginPage() {
             onError={() => {
               setError("Login Failed at the Google Provider level.");
             }}
-            useOneTap
             shape="rectangular"
             theme="filled_blue"
             size="large"
