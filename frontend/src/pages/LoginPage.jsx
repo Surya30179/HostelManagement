@@ -18,7 +18,7 @@ export default function LoginPage() {
       login(data.token, data.user);
       window.location.href = "/";
     } catch (err) {
-      setError(err.response?.data?.error || "Google authentication failed with the server.");
+      setError(err.response?.data?.error || `Connection Failed: ${err.message}`);
     }
   }
 
