@@ -19,8 +19,8 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
 
-    # CORS — allow React dev server
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    # CORS — allow all origins (mobile browsers are strict about preflight)
+    CORS(app, resources={r"/api/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"], "allow_headers": ["Content-Type", "Authorization"]}})
 
     db.init_app(app)
 

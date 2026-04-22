@@ -62,6 +62,7 @@ export default function LoginPage() {
             <br/><br/>
             Wait! Notice an error? The administrator must configure the <code>GOOGLE_CLIENT_ID</code> in both the frontend (<code>.env</code>) and backend configuration for SSO to activate.
           </p>
+          <p className="text-[10px] text-gray-400 mt-2 break-all">API: {import.meta.env.VITE_API_URL || "localhost:5000 (fallback)"}</p>
         </div>
       </div>
     </div>
