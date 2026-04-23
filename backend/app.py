@@ -38,6 +38,14 @@ def create_app():
     with app.app_context():
         db.create_all()
 
+        # Auto-promote the system administrator
+        from models import User
+        admin = User.query.filter_by(email="231093.cs@rmkec.ac.in").first()
+        if admin and admin.role != "ADMIN":
+            admin.role = "ADMIN"
+            db.session.commit()
+            logging.info("Auto-promoted 231093.cs@rmkec.ac.in to ADMIN")
+
     return app
 
 
